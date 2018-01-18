@@ -16,16 +16,16 @@ class App extends Component {
       }
     }
     addOp(e){
-      switch(true){
-        case this.state.currentEquation.slice(-1) === "+":
-        case this.state.currentEquation.slice(-1) === "-":
-        case this.state.currentEquation.slice(-1) === "÷":
-        case this.state.currentEquation.slice(-1) === "x":
+      switch(this.state.currentEquation.toString().slice(-1)){
+        case  "+":
+        case  "-":
+        case  "÷":
+        case  "x":
         break;
         default:
-          this.setState({
-              currentEquation: this.state.currentEquation + e.target.innerText
-          });
+            this.setState({
+                currentEquation: this.state.currentEquation + e.target.innerText
+            });
         break;
       }
     }
